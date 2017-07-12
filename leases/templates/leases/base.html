@@ -1,0 +1,40 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'leases/styles.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'leases/progress-wizard.min.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'leases/normalize.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'leases/component.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'leases/dropzone.css' %}" />
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="../../../static/leases/images/favico.png" type="image/x-icon" />
+    <title>Cruise Property Management | Lease Portal</title>
+    <meta name="description" content="Bank of America leases">
+    <meta name="author" content="Nicholas Brown">
+    <script src="{% static 'leases/js/dropzone.js' %}"></script>
+    <script>(function(e,t,n){var r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);</script>
+</head>
+<body>
+ <div id="wrapper">
+        <div class="header">
+            <div class="header-module">
+                <div class="logo-header">
+                    <img class="bofa-logo" alt="Bank of America" src="../../../static/leases/images/logo1-sm.png"/>
+                    <img class="secure-logo" alt="Secure Page" src="../../../static/leases/images/padlock-open.png"/>
+                </div>
+                <div class="red-header">
+                    <span id="redheader-text">Lease Automation System</span>
+            </div>
+        </div>
+</div>
+{% block content %}
+
+{% endblock %}
+
+</body>
+<script src="{% static 'leases/js/custom-file-input.js' %}"></script>
+<footer>
+<div class="endsec">
+<div class="footer-links header_font">© 2017 Cruise Property Management Inc.<br></div></div>
+</footer>

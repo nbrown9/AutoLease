@@ -1,0 +1,87 @@
+{% extends "leases/base.html" %}
+
+{% block content %}
+
+<div id="indexhomeimage">
+    <div class="tag">Get started or view the tutorial below</div>
+    <img src="../../../static/leases/images/appimage.jpg" id="appimage" alt="apply now"/>
+</div>
+
+
+<div id="ulbox">
+<h3>Features</h3>
+<ul>
+    <li>Generate multiple leases at once</li>
+    <li>Multi-template support: do more leases at once</li>
+    <li>Single lease option for quick creation</li>
+</ul>
+</div>
+
+<div id="readytobulk">
+<h2>Ready to Start?</h2>
+<h3>Getting started is fast and easy. Create a single lease or generate multiple from a CSV file.<br><br></h3>
+<!-- Button to open the modal login form -->
+<button onclick="document.getElementById('id01').style.display='block'">Single Entry</button>
+<span id="or">or</span>
+<a id="button1" href="leases/bulk" style="text-decoration: none; width:150px; ">Upload List</a>
+<h3 id="bottomtxt">Error or problem? Contact <a href='nlbrown@cruisepropertymanagement.com'>support</a></h3>
+</div>
+
+<!-- The Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" 
+class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content -->
+  <form class="modal-content animate" action="/leases/bulk" autocomplete="off">
+    <div class="imgcontainer">
+      <img src="../../../static/leases/images/logo1-sm.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label><b>Tenant 1</b></label>
+      <input type="text" placeholder="Enter Tenant Name" name="tname" required>
+
+      <label><b>Tenant 2 (Optional)</b></label>
+      <input type="text" placeholder="Enter Tenant Name" name="tname2" optional>
+
+      <label><b>Street Address</b></label>
+      <input type="text" placeholder="Street Address" name="srtaddr" required>
+
+      <label><b>Unit Number</b></label>
+      <input type="text" placeholder="Unit Number" name="unitnumb" required>
+
+      <label><b>City</b></label>
+      <input type="text" placeholder="City Name" name="cityname" required>
+
+      <label><b>Number of Children</b></label>
+      <input type="text" placeholder="Number of Children" name="kidcnt">
+
+      <label><b>Pet Fee</b></label>
+      <input type="text" placeholder="Pet Fee" name="petfee">
+
+      <label><b>Lease Length</b></label>
+      <input type="text" placeholder="Lease Length" name="llength" required>
+
+      <label><b>Lease Start</b></label>
+      <input style="width:100%; padding:8px; margin-top:10px; margin-bottom:10px;" type="date" placeholder="Start Date" name="sdate" required>
+
+      <label><b>Lease End</b></label>
+      <input style="width:100%; padding:8px; margin-top:10px; margin-bottom:10px;" type="date" placeholder="End Date" name="edate" required>
+
+      <Label><b>Rent Amount</b></Label>
+      <input type="text" placeholder="Rent Amount" name="rentcost" />
+
+      <Label><b>Security Deposit</b></Label>
+      <input type="text" placeholder="Security Deposit" name="secdep" />
+
+
+      <button type="submit" style="width:100%; margin-top:20px;">Generate Lease</button>
+    </div>
+
+    <div class="container" >
+      
+    </div>
+  </form>
+</div>
+{% endblock %}
