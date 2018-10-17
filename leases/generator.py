@@ -89,7 +89,7 @@ class Generator(object):
             i = i+1
             filenames.append(str(name.replace(" ","")+'UnsignedLease.pdf'))
         self.filenames = filenames
-        print self.filenames
+        print(self.filenames)
     
     #returns the dictionary of uploaded file names
     def createdfiles(self):

@@ -10,7 +10,7 @@ from django.utils.encoding import smart_str
 import os 
 from leases.generator import Generator
 import zipfile
-import StringIO
+import io
 
 upload_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'media')
 
